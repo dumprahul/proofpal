@@ -5,7 +5,7 @@ import torch.nn as nn
 
 # Define a simple feedforward network for carbon credit verification
 class CarbonVerifier(nn.Module):
-    def __init__(self, input_dim=10, hidden_dim=20, output_dim=1):
+    def __init__(self, input_dim=5, hidden_dim=20, output_dim=1):
         super(CarbonVerifier, self).__init__()
         self.net = nn.Sequential(
             nn.Linear(input_dim, hidden_dim),
@@ -17,13 +17,13 @@ class CarbonVerifier(nn.Module):
         return self.net(x)
 
 
-def export_model(output_file='carbon_verifier.onnx'):
+def export_model(output_file='network.onnx'):
     # Initialize the model and set to evaluation
-    model = CarbonVerifier(input_dim=10, hidden_dim=20, output_dim=1)
+    model = CarbonVerifier(input_dim=5, hidden_dim=20, output_dim=1)
     model.eval()
 
     # Prepare dummy input matching the input dimensions
-    dummy_input = torch.randn(1, 10)
+    dummy_input = torch.randn(1, 5)
 
     # Export the model to ONNX format
     torch.onnx.export(
