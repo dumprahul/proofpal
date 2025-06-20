@@ -1,102 +1,55 @@
-import Image from "next/image";
+import { ShimmerButton } from "@/components/magicui/shimmer-button";
+import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
+import { SparklesText } from "@/components/magicui/sparkles-text";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="relative min-h-screen flex flex-col items-center justify-center bg-[#0f1021] overflow-hidden">
+      {/* Neon grid background effect */}
+      <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-br from-[#1a1a40] via-[#23235b] to-[#0f1021]">
+        {/* Optionally add a subtle grid or glow here with CSS or SVG */}
+        <div className="absolute inset-0 opacity-30 [background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.07)_0_1px,transparent_1px_40px),repeating-linear-gradient(180deg,rgba(255,255,255,0.07)_0_1px,transparent_1px_40px)]" />
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      <main className="relative z-10 flex flex-col items-center justify-center gap-8 w-full max-w-3xl px-4 py-16">
+        {/* Deployed on Mantle (shiny text) */}
+        <div className="flex flex-col items-center gap-2">
+          <AnimatedGradientText
+            colorFrom="rgba(255,255,255,0.8)"
+            colorTo="rgba(255,255,255,1)"
+            speed={2}
+            className="text-base sm:text-lg md:text-xl mb-2"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Deployed on Mantle
+          </AnimatedGradientText>
+          {/* ProofPal (sparkles text) */}
+          <SparklesText
+            className="text-center text-white text-5xl sm:text-6xl md:text-7xl font-extrabold mb-2"
+            colors={{ first: "white", second: "#eeeeee" }}
+            sparklesCount={18}
           >
-            Read our docs
-          </a>
+            ProofPal
+          </SparklesText>
+        </div>
+        <p className="text-center text-lg sm:text-xl text-white/90 max-w-xl mt-2">
+          ProofPal is a decentralized, zero-knowledge ML platform—your open-source, trustless alternative to HuggingFace. Share, verify, and deploy ML models with privacy and transparency.
+        </p>
+        <div className="flex flex-col items-center gap-4">
+          <ShimmerButton
+            shimmerColor="#ffffff"
+            shimmerSize="0.1em"
+            shimmerDuration="3s"
+            borderRadius="100px"
+            background="rgba(255,255,255,0.05)"
+            className="text-lg font-semibold px-8 py-3 border border-white/10 shadow-lg hover:shadow-white/20 hover:scale-105 transition-transform"
+          >
+            <span className="text-white">Get Started</span>
+          </ShimmerButton>
+          <span className="text-xs text-white/70 mt-1">Open-source. Trustless. For everyone.</span>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer className="relative z-10 w-full flex justify-center py-6 text-white/60 text-sm">
+        &copy; {new Date().getFullYear()} ProofPal. Built for the future of decentralized AI.
       </footer>
     </div>
   );
