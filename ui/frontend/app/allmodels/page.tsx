@@ -14,7 +14,7 @@ import { useAccount, useWalletClient } from 'wagmi';
 import { parseEther } from 'viem';
 import { ModelRegisteryABI, ModelRegisteryAddress } from '@/app/contracts/ModelRegistery';
 import { createPublicClient, createWalletClient, custom, http } from 'viem';
-import { sepolia } from 'viem/chains';
+import { sepolia,mantleSepoliaTestnet } from 'viem/chains';
 
 const models = [
   {
@@ -202,13 +202,13 @@ const UploadModal = ({ isOpen, onClose }: UploadModalProps) => {
     try {
       // Create wallet client
       const wallet = createWalletClient({
-        chain: sepolia,
+        chain: mantleSepoliaTestnet,
         transport: custom(window.ethereum as any)
       });
 
       // Create public client
       const publicClient = createPublicClient({
-        chain: sepolia,
+        chain: mantleSepoliaTestnet,
         transport: http()
       });
 
@@ -524,7 +524,7 @@ const UploadModal = ({ isOpen, onClose }: UploadModalProps) => {
                 </button>
               </div>
               <a
-                href={`https://explorer.sepolia.mantle.xyz/tx/${transactionHash}`}
+                href={`https://sepolia.mantlescan.xyz/tx/${transactionHash}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 flex items-center gap-2 text-[#3b82f6] hover:underline text-sm"

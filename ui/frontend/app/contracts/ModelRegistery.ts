@@ -449,4 +449,4 @@ export const ModelRegisteryABI = [
 
 
 
-export const ModelRegisteryAddress = "0x119Ed11F262DDF33ea44c27E0c373E28dF442607"; 
+export const ModelRegisteryAddress = "0x1447EEE46ed0432B46638fa6B44E0191d19212CA"; 

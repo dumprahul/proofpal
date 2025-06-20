@@ -85,3 +85,5 @@ export const ModelRegisteryABI = [
     "type": "function"
   }
 ]; 
+
+export const ModelRegisteryAddress = "0x1447EEE46ed0432B46638fa6B44E0191d19212CA"; 
