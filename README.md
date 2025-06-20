@@ -38,6 +38,7 @@ Setup for ProofPal in your Local Machine:
 
  ```bash
     git clone https://github.com/dumprahul/proofpal
+    cd proofpal
     cd ui
     cd frontend
     npm install
