@@ -1561,3 +1561,5 @@ contract Halo2Verifier {
         }
     }
 }
+
+//deployed at : 0x05471a914D01A4aF5E91Ede5CaBfC4AfE33a0c3e
