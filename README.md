@@ -4,6 +4,7 @@
 
 A zkML model execution and verification hub powered by zero-knowledge proofs on the Mantle blockchain.
 
+**pitch demo video**- https://www.youtube.com/watch?v=zp_aJP4PJiE
 **setup demo video** - https://youtu.be/YspaSgdw8aY
 
 **Deployed Contracts on Mantle Testnet**
