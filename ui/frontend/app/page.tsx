@@ -148,14 +148,14 @@ export default function LandingPage() {
               <HeroVideoDialog
                 className="block dark:hidden"
                 animationStyle="top-in-bottom-out"
-                videoSrc="https://www.youtube.com"
+                videoSrc="https://www.youtube.com/embed/YspaSgdw8aY"
                 thumbnailSrc="/ss.png"
                 thumbnailAlt="Hero Video"
               />
               <HeroVideoDialog
                 className="hidden dark:block"
                 animationStyle="top-in-bottom-out"
-                videoSrc="https://www.youtube.com"
+                videoSrc="https://www.youtube.com/embed/YspaSgdw8aY"
                 thumbnailSrc="/ss.png"
                 thumbnailAlt="Hero Video"
               />
