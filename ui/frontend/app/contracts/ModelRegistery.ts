@@ -448,5 +448,5 @@ export const ModelRegisteryABI = [
 ] as const;
 
 
-// Replace this with your actual deployed contract address
-export const ModelRegisteryAddress = "0xE482db1c83Bb1A22c93642ad2494845DD367A369"; 
+
+export const ModelRegisteryAddress = "0x119Ed11F262DDF33ea44c27E0c373E28dF442607"; 
